@@ -11,6 +11,30 @@
   color: $white-text-color;
   z-index: 9;
 
+  // Theme button
+  .theme-btn {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    line-height: 0;
+    left: 3;
+    margin-left: 5%;
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+    span {
+      @extend %font-awesome-icon-base;
+      font-size: 1.5rem;
+    }
+    & > input[type="checkbox"] + span::before {
+      @include add-font-awesome-icon("\f186");
+    }
+    & > input[type="checkbox"]:checked + span::before {
+      @include add-font-awesome-icon("\f185");
+    }
+  }
+
   // nav links
   .nav-bar-content {
     @extend %flex-between-center;

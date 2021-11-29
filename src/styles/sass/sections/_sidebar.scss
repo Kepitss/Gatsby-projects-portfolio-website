@@ -1,8 +1,8 @@
 @use "../helpers" as *;
 
 .sidebar {
+  // background-color is set in styles/sass/base/theme.scss
   @extend %flex-center-center;
-  background-color: $bg-dark;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -11,7 +11,7 @@
   z-index: 10;
 
   .close-btn {
-    color: $white-text-color;
+    // color is set in styles/sass/base/theme.scss
     top: 0;
     right: 0;
     margin: 1vw 9vw 0 0;
@@ -25,7 +25,7 @@
     flex-direction: column;
 
     .sidebar-link {
-      color: $white-text-color;
+      // color is set in styles/sass/base/theme.scss
       font-family: "Raleway";
       text-decoration: none;
       margin-top: 1rem;

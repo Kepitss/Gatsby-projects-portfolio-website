@@ -7,8 +7,8 @@
   margin-bottom: 5vw;
 
   .slide-over-container {
+    // background-color is set in styles/sass/base/theme.scss
     @extend %flex-center-center;
-    background-color: $slide-over-container-dark;
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -18,7 +18,7 @@
     z-index: 2;
 
     h1 {
-      color: $white-text-color;
+      // color is set in styles/sass/base/theme.scss
       width: 85%;
       text-align: center;
       font-family: "Nova Flat", sans-serif;
@@ -28,7 +28,7 @@
       z-index: 10;
     }
     p {
-      color: $white-text-color;
+      // color is set in styles/sass/base/theme.scss
       width: 30%;
       text-align: center;
       font-family: "Raleway", sans-serif;

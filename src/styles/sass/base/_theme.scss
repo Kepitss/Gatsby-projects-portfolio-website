@@ -1,0 +1,79 @@
+@use "../helpers" as *;
+
+body {
+  // Varibales for light theme
+  $bg: $bg-light; // background-color for base container
+  $textNormal: $black-text-color; // color for any text who dont have set color in bottom
+  $sidebar-bg: $bg-dark;
+  $sidebar-exit-btn: $white-text-color;
+  $sidebar-link-color: $white-text-color;
+  $slide-text-color: $white-text-color;
+  $slide-over-container-bg: $slide-over-container-dark;
+
+  background-color: $bg;
+  color: $textNormal;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease-out;
+
+  // Sidebar
+  .sidebar {
+    background-color: $sidebar-bg;
+    .close-btn {
+      color: $sidebar-exit-btn;
+    }
+    .sidebar-links {
+      .sidebar-link {
+        color: $sidebar-link-color;
+      }
+    }
+  }
+  // Slider
+  .slider {
+    .slide-over-container {
+      background-color: $slide-over-container-bg;
+      h1,
+      p {
+        color: $slide-text-color;
+      }
+    }
+  }
+}
+
+body.dark {
+  // Variables for dark theme
+  $bg: $bg-dark; // background-color for base container
+  $textNormal: $white-text-color; // color for any text who dont have set color in bottom
+  $sidebar-bg: $bg-light;
+  $sidebar-exit-btn: $black-text-color;
+  $sidebar-link-color: $black-text-color;
+  $slide-text-color: $black-text-color;
+  $slide-over-container-bg: $slide-over-container-light;
+
+  background-color: $bg;
+  color: $textNormal;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease-out;
+
+  // Sidebar
+  .sidebar {
+    background-color: $sidebar-bg;
+    .close-btn {
+      color: $sidebar-exit-btn;
+    }
+    .sidebar-links {
+      .sidebar-link {
+        color: $sidebar-link-color;
+      }
+    }
+  }
+  // Slider
+  .slider {
+    .slide-over-container {
+      background-color: $slide-over-container-bg;
+      h1,
+      p {
+        color: $slide-text-color;
+      }
+    }
+  }
+}

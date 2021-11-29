@@ -3,9 +3,13 @@ import { Link } from "gatsby"
 import { SiMaterialdesign } from "react-icons/si"
 import { GiHamburgerMenu } from "react-icons/gi"
 
+import ThemeComponent from "../components/ThemeComponent"
+
 const Navbar = ({ sidebar, setSidebar }) => {
   return (
     <div className="nav-bar">
+      <ThemeComponent />
+
       <div className="nav-bar-content">
         {/* Links in left side */}
         <div className="nav-left-buttons">

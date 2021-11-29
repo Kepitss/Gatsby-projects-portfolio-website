@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "gatsby": "^4.2.0",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-sass": "^5.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
@@ -25,6 +26,7 @@
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1",
     "sass": "^1.43.5"
   },
   "devDependencies": {
