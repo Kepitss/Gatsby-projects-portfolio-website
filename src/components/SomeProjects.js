@@ -11,6 +11,7 @@ const SomeProjects = () => {
       allStrapiProjects(limit: 5) {
         nodes {
           title
+          projectTitleInURL
           projectPosition
           image1 {
             localFile {
@@ -33,13 +34,15 @@ const SomeProjects = () => {
       <div className="some-projects-container">
         <div className="some-projects">
           {someProjects.map((project, index) => {
-            const { title, image1, projectPosition } = project
+            const { title, projectTitleInURL, image1, projectPosition } =
+              project
             const readyImg = getImage(
               image1.localFile.childImageSharp.gatsbyImageData
             )
 
             return (
-              <div
+              <Link
+                to={`/projects/${projectTitleInURL}`}
                 className={`project
              ${projectPosition === "1" ? "project-1" : ""}
              ${projectPosition === "2" ? "project-2" : ""}
@@ -53,7 +56,7 @@ const SomeProjects = () => {
                   <h1>{title}</h1>
                 </div>
                 <GatsbyImage image={readyImg} alt={title} className="img" />
-              </div>
+              </Link>
             )
           })}
         </div>
