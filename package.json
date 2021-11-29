@@ -27,7 +27,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.3.1",
-    "sass": "^1.43.5"
+    "sass": "^1.43.5",
+    "slugify": "^1.6.3"
   },
   "devDependencies": {
     "prettier": "^2.4.1"

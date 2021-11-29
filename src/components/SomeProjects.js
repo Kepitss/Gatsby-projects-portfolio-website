@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import slugify from "slugify"
 
 import Title from "../components/Title"
 
@@ -11,7 +12,6 @@ const SomeProjects = () => {
       allStrapiProjects(limit: 5) {
         nodes {
           title
-          projectTitleInURL
           projectPosition
           image1 {
             localFile {
@@ -34,15 +34,15 @@ const SomeProjects = () => {
       <div className="some-projects-container">
         <div className="some-projects">
           {someProjects.map((project, index) => {
-            const { title, projectTitleInURL, image1, projectPosition } =
-              project
+            const { title, image1, projectPosition } = project
             const readyImg = getImage(
               image1.localFile.childImageSharp.gatsbyImageData
             )
+            const slug = slugify(title, { lower: true })
 
             return (
               <Link
-                to={`/projects/${projectTitleInURL}`}
+                to={`/projects/${slug}`}
                 className={`project
              ${projectPosition === "1" ? "project-1" : ""}
              ${projectPosition === "2" ? "project-2" : ""}
