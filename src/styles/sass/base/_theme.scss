@@ -9,6 +9,8 @@ body {
   $sidebar-link-color: $white-text-color;
   $slide-text-color: $white-text-color;
   $slide-over-container-bg: $slide-over-container-dark;
+  $some-projects-button-color: $black-text-color;
+  $some-projects-button-border: $black-button-border;
 
   background-color: $bg;
   color: $textNormal;
@@ -35,6 +37,14 @@ body {
       p {
         color: $slide-text-color;
       }
+    }
+  }
+
+  // Some Projects
+  .some-projects-container {
+    .projects-btn {
+      color: $some-projects-button-color;
+      border: 0.15vw solid $some-projects-button-border;
     }
   }
 }
@@ -48,6 +58,8 @@ body.dark {
   $sidebar-link-color: $black-text-color;
   $slide-text-color: $black-text-color;
   $slide-over-container-bg: $slide-over-container-light;
+  $some-projects-button-color: $white-text-color;
+  $some-projects-button-border: $white-button-border;
 
   background-color: $bg;
   color: $textNormal;
@@ -74,6 +86,13 @@ body.dark {
       p {
         color: $slide-text-color;
       }
+    }
+  }
+  // Some Projects
+  .some-projects-container {
+    .projects-btn {
+      color: $some-projects-button-color;
+      border: 0.15vw solid $some-projects-button-border;
     }
   }
 }

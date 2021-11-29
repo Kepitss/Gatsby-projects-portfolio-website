@@ -1,6 +1,9 @@
 // base
 @import "./base/base";
 
+// title component
+@import "./components/title";
+
 // navbar
 @import "./sections/navbar";
 
@@ -15,3 +18,6 @@
 
 // homepage slider
 @import "./sections/slider";
+
+// homepage some projects
+@import "./sections/some-projects";

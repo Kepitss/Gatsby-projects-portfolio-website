@@ -1,11 +1,15 @@
 import React from "react"
 
 import Slider from "../components/Slider"
+import SomeProjects from "../components/SomeProjects"
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Slider />
+      <SomeProjects />
     </>
   )
 }
+
+export default Home
