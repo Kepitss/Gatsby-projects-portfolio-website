@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.sidebar {
+  @extend %flex-center-center;
+  background-color: $bg-dark;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  transition: right 0.8s cubic-bezier(0.5, 1, 0.5, 1);
+  z-index: 10;
+
+  .close-btn {
+    color: $white-text-color;
+    top: 0;
+    right: 0;
+    margin: 1vw 9vw 0 0;
+    position: absolute;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-link {
+      color: $white-text-color;
+      font-family: "Raleway";
+      text-decoration: none;
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+// show / hide
+.sidebar-hide {
+  right: -110%;
+}
+.sidebar-show {
+  right: 0;
+}
