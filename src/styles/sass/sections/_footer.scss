@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+.footer-container {
+  @extend %flex-center-center;
+  width: 100%;
+  padding: 1rem 0;
+
+  small {
+    color: $black-text-color;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    span {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-container {
+    small {
+      font-size: 3vw;
+    }
+  }
+}
