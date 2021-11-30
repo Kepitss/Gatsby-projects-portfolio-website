@@ -5,13 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import QuestionAccordion from "../components/QuestionAccordion"
 
 const About = ({ data }) => {
-  const {
-    title,
-    about_us_info,
-    office_indoor_image,
-    office_outdoor_image,
-    AboutUsQuestions,
-  } = data.strapiAboutUs
+  const { title, about_us_info, office_indoor_image, office_outdoor_image } =
+    data.strapiAboutUs
   const readyOfficeIndoorImage = getImage(
     office_indoor_image.localFile.childImageSharp.gatsbyImageData
   )

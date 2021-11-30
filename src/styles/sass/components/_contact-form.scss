@@ -1,0 +1,163 @@
+@use "../helpers/" as *;
+
+.contact-form-container {
+  width: 40vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 15vh;
+
+  .contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    label,
+    button {
+      font-family: "Raleway", sans-serif;
+      margin-top: 0.5vw;
+    }
+
+    input,
+    textarea {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.1vw;
+      padding: 0.4vw 1vw;
+      border-radius: 0.2vw;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    label {
+      font-size: 1.3vw;
+      padding-left: 0.5vw;
+    }
+    button {
+      @extend %flex-center-center;
+      width: 25%;
+      margin-left: 75%;
+      font-family: "Nova Flat", sans-serif;
+      padding: 0.5vw;
+      font-size: 1.3vw;
+      text-transform: capitalize;
+      background-color: transparent;
+      border-radius: 0.5vw;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+      color: $white-text-color;
+      border: 0.15vw solid $white-button-border;
+
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
+      }
+    }
+    textarea {
+      min-height: 15vw;
+      max-height: 50vw;
+      resize: vertical;
+    }
+
+    .validator {
+      font-family: "Raleway", sans-serif;
+      font-size: 1.3vw;
+      color: red;
+    }
+  }
+}
+
+.success-msg {
+  h3 {
+    font-family: "Nova Flat", sans-serif;
+    font-size: 1.5vw;
+    color: $form-success-color;
+    text-align: center;
+  }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .contact-form-container {
+    width: 80vw;
+    .contact-form {
+      input,
+      textarea,
+      label,
+      button,
+      .validator {
+        font-size: 1.95vw;
+      }
+      textarea {
+        min-height: 20vw;
+      }
+    }
+  }
+  .success-msg {
+    h3 {
+      font-size: 3vw;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .contact-form-container {
+    width: 95vw;
+    .contact-form {
+      input,
+      textarea,
+      label,
+      button,
+      .validator {
+        font-size: 2.6vw;
+      }
+      textarea {
+        min-height: 25vw;
+      }
+      input,
+      textarea {
+        padding: 0.8vw 2vw;
+      }
+    }
+  }
+  .success-msg {
+    h3 {
+      font-size: 4.5vw;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .contact-form-container {
+    width: 95vw;
+    .contact-form {
+      input,
+      textarea,
+      label,
+      button,
+      .validator {
+        font-size: 3.9vw;
+      }
+      textarea {
+        min-height: 40vw;
+      }
+      input,
+      textarea {
+        padding: 1.2vw 3vw;
+      }
+      button {
+        padding: 1vw;
+      }
+    }
+  }
+  .success-msg {
+    h3 {
+      font-size: 6vw;
+    }
+  }
+}
