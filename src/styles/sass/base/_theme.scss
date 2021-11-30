@@ -12,6 +12,10 @@ body {
   $some-projects-button-color: $black-text-color;
   $some-projects-button-border: $black-button-border;
 
+  $question-accordion-border: $black-button-border;
+  $question-accordion-button-color: $black-text-color;
+  $question-accordion-panel-bg: $bg-dark;
+  $question-accordion-panel-color: $white-text-color;
   background-color: $bg;
   color: $textNormal;
   -webkit-font-smoothing: antialiased;
@@ -46,6 +50,19 @@ body {
       color: $some-projects-button-color;
       border: 0.15vw solid $some-projects-button-border;
     }
+  }
+
+  // About page Accordion
+  .accordion,
+  .accordion__item {
+    border: 0.1vw solid $question-accordion-border;
+  }
+  .accordion__button {
+    color: $question-accordion-button-color;
+  }
+  .accordion__panel {
+    background-color: $question-accordion-panel-bg;
+    color: $question-accordion-panel-color;
   }
 }
 
@@ -61,6 +78,11 @@ body.dark {
   $some-projects-button-color: $white-text-color;
   $some-projects-button-border: $white-button-border;
 
+  $question-accordion-border: $white-button-border;
+  $question-accordion-button-color: $white-text-color;
+  $question-accordion-panel-bg: $bg-light;
+  $question-accordion-panel-color: $black-text-color;
+
   background-color: $bg;
   color: $textNormal;
   -webkit-font-smoothing: antialiased;
@@ -78,6 +100,7 @@ body.dark {
       }
     }
   }
+
   // Slider
   .slider {
     .slide-over-container {
@@ -88,11 +111,25 @@ body.dark {
       }
     }
   }
+
   // Some Projects
   .some-projects-container {
     .projects-btn {
       color: $some-projects-button-color;
       border: 0.15vw solid $some-projects-button-border;
     }
+  }
+
+  // About page Accordion
+  .accordion,
+  .accordion__item {
+    border: 0.1vw solid $question-accordion-border;
+  }
+  .accordion__button {
+    color: $question-accordion-button-color;
+  }
+  .accordion__panel {
+    background-color: $question-accordion-panel-bg;
+    color: $question-accordion-panel-color;
   }
 }
