@@ -6,7 +6,7 @@ const Slider = () => {
   const [index, setIndex] = useState(0)
   const data = useStaticQuery(graphql`
     {
-      allFile(limit: 4) {
+      allFile(filter: { absolutePath: { regex: "/slider/" } }) {
         nodes {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
