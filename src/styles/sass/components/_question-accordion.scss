@@ -1,0 +1,105 @@
+@use "../helpers" as *;
+
+.accordion {
+  // border set at base/theme.scss
+  width: 80%;
+  border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+  width: 100%;
+}
+// .accordion__item + .accordion__item
+//  border set at base/theme.scss
+
+.accordion__button {
+  // color set at base/theme.scss
+  cursor: pointer;
+  padding: 0.8vw;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+}
+
+.accordion__button:before {
+  display: inline-block;
+  content: "";
+  height: 0.6vw;
+  width: 0.6vw;
+  margin-right: 12px;
+  border-bottom: 0.2vw solid currentColor;
+  border-right: 0.2vw solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded="true"]::before,
+.accordion__button[aria-selected="true"]::before {
+  transform: rotate(45deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  //  background and border set at base/theme.scss
+  padding: 1vw;
+  animation: fadein 0.35s ease-in;
+  font-family: "Poppins", sans-serif;
+  font-size: 1vw;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .accordion__button {
+    padding: 1.2vw;
+  }
+  .accordion__panel {
+    padding: 1.5vw;
+  }
+
+  .accordion__button,
+  .accordion__panel {
+    font-size: 1.5vw;
+  }
+  .accordion__button:before {
+    width: 0.9vw;
+    height: 0.9vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .accordion {
+    width: 100%;
+  }
+  .accordion__button {
+    padding: 2.4vw;
+  }
+  .accordion__panel {
+    padding: 3vw;
+  }
+
+  .accordion__button,
+  .accordion__panel {
+    font-size: 3vw;
+  }
+  .accordion__button:before {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+}
