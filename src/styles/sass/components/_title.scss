@@ -5,23 +5,21 @@
   text-align: center;
   text-transform: capitalize;
   font-family: "Nova Flat", sans-serif;
-  font-size: 2.5vw;
+  font-size: 3rem;
 }
 
-.main-title-color-black {
-  color: $black-text-color;
-}
-.main-title-color-white {
-  color: $white-text-color;
-}
-
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .main-title {
-    font-size: 3.5vw;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 700px) {
   .main-title {
-    font-size: 4.5vw;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .main-title {
+    font-size: 1.7rem;
   }
 }
