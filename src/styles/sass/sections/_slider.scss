@@ -8,7 +8,9 @@
 
   .slide-over-container {
     // background-color is set in styles/sass/base/theme.scss
-    @extend %flex-center-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -103,16 +105,41 @@
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1100px) {
+@media (max-height: 700px) {
+  .slider {
+    .slide-over-container {
+      justify-content: flex-end;
+      p {
+        margin-bottom: 10vh;
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  .slider {
+    .slide-over-container {
+      justify-content: flex-end;
+      p {
+        margin-bottom: 1vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) and (orientation: landscape) {
   .slider {
     height: 100vh;
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 800px) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
   .slider {
     .slide-over-container {
       justify-content: flex-end;
+      p {
+        margin-bottom: 5vh;
+      }
     }
   }
 }
