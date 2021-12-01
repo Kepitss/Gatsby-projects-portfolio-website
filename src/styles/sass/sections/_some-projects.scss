@@ -74,11 +74,10 @@
   // to all projects button
   .projects-btn {
     // color and border is set in themes.scss
-    width: 10%;
     font-family: "Nova Flat", sans-serif;
     margin-top: 2vw;
-    padding: 0.5vw;
-    font-size: 1.3vw;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
     background-color: transparent;
     border-radius: 0.5vw;
@@ -139,10 +138,7 @@
     }
 
     .projects-btn {
-      width: 25%;
-      padding: 1.5vw;
-      font-size: 3vw;
-      border-radius: 1vw;
+      font-size: 1rem;
     }
   }
 }
