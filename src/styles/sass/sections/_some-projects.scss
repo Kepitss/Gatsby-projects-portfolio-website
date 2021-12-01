@@ -98,21 +98,43 @@
   .some-projects-container {
     .some-projects {
       width: 80vw;
+      grid-template-areas:
+        "project-1 project-1"
+        "project-1 project-1"
+        "project-2 project-2"
+        "project-2 project-2"
+        "project-3 project-3"
+        "project-3 project-3"
+        "project-4 project-4"
+        "project-4 project-4"
+        "project-5 project-5"
+        "project-5 project-5";
+      grid-gap: 1vw;
+      .project {
+        max-height: 200px;
+        .project-hover {
+          width: auto;
+          height: auto;
+          h1 {
+            font-size: 1.5rem;
+            padding: 0 0.5rem;
+          }
+        }
+      }
     }
   }
 }
 @media (max-width: 500px) {
   .some-projects-container {
     .some-projects {
-      grid-template-areas:
-        "project-1 project-2"
-        "project-1 project-2"
-        "project-3 project-4"
-        "project-3 project-4"
-        "project-5 project-5";
-      grid-gap: 1vw;
+      width: 95vw;
       .project {
         max-height: 150px;
+        .project-hover {
+          h1 {
+            font-size: 1rem;
+          }
+        }
       }
     }
 
@@ -125,14 +147,27 @@
   }
 }
 
+@media (max-width: 300px) {
+  .some-projects-container {
+    .some-projects {
+      .project {
+        max-height: 100px;
+        .project-hover {
+          h1 {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (hover: none) {
   .some-projects-container {
     .some-projects {
       .project {
         .project-hover {
           opacity: 1;
-          width: 50%;
-          height: 20%;
         }
       }
     }
