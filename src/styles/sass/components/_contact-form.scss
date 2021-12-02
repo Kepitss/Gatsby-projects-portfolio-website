@@ -30,6 +30,11 @@
         outline: none;
       }
     }
+    textarea {
+      min-height: 15vw;
+      max-height: 50vw;
+      resize: vertical;
+    }
 
     label {
       // color is set at base/theme.scss
@@ -41,9 +46,10 @@
       @extend %flex-center-center;
       width: 25%;
       margin-left: 75%;
+      margin-top: 0.5rem;
       font-family: "Nova Flat", sans-serif;
-      padding: 0.5vw;
-      font-size: 1.3vw;
+      padding: 0.5rem;
+      font-size: 1.3rem;
       text-transform: capitalize;
       background-color: transparent;
       border-radius: 0.5vw;
@@ -52,15 +58,11 @@
       text-align: center;
       transition: 0.3s ease-in-out;
     }
-    textarea {
-      min-height: 15vw;
-      max-height: 50vw;
-      resize: vertical;
-    }
 
     .validator {
       font-family: "Raleway", sans-serif;
       font-size: 1.3vw;
+      // validator color is the same on both website themes
       color: red;
     }
   }
@@ -70,6 +72,7 @@
   h3 {
     font-family: "Nova Flat", sans-serif;
     font-size: 1.5vw;
+    // success messages color is the same on both website themes
     color: $form-success-color;
     text-align: center;
   }
@@ -87,7 +90,6 @@
       input,
       textarea,
       label,
-      button,
       .validator {
         font-size: 1.95vw;
       }
@@ -102,16 +104,18 @@
     }
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .contact-form-container {
     width: 95vw;
     .contact-form {
       input,
       textarea,
       label,
-      button,
       .validator {
         font-size: 2.6vw;
+      }
+      button {
+        padding: 1vw;
       }
       textarea {
         min-height: 25vw;
@@ -135,7 +139,6 @@
       input,
       textarea,
       label,
-      button,
       .validator {
         font-size: 3.9vw;
       }
@@ -147,6 +150,8 @@
         padding: 1.2vw 3vw;
       }
       button {
+        width: 40%;
+        margin-left: 60%;
         padding: 1vw;
       }
     }
