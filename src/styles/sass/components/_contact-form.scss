@@ -19,6 +19,7 @@
 
     input,
     textarea {
+      // background color and color is set on base/theme.scss
       font-family: "Poppins", sans-serif;
       font-size: 1.1vw;
       padding: 0.4vw 1vw;
@@ -31,10 +32,12 @@
     }
 
     label {
+      // color is set at base/theme.scss
       font-size: 1.3vw;
       padding-left: 0.5vw;
     }
     button {
+      // button color and border is set on base/theme.scss
       @extend %flex-center-center;
       width: 25%;
       margin-left: 75%;
@@ -48,13 +51,6 @@
       text-decoration: none;
       text-align: center;
       transition: 0.3s ease-in-out;
-      color: $white-text-color;
-      border: 0.15vw solid $white-button-border;
-
-      &:hover {
-        background-color: $bg-dark;
-        color: $white-text-color;
-      }
     }
     textarea {
       min-height: 15vw;
