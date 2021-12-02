@@ -53,12 +53,14 @@ body {
   }
 
   // About page Accordion
-  .accordion,
-  .accordion__item {
+  .accordion {
     border: 0.1vw solid $question-accordion-border;
   }
   .accordion__button {
     color: $question-accordion-button-color;
+  }
+  .accordion__item + .accordion__item {
+    border-top: 0.1vw solid $question-accordion-border;
   }
   .accordion__panel {
     background-color: $question-accordion-panel-bg;
@@ -121,12 +123,14 @@ body.dark {
   }
 
   // About page Accordion
-  .accordion,
-  .accordion__item {
+  .accordion {
     border: 0.1vw solid $question-accordion-border;
   }
   .accordion__button {
     color: $question-accordion-button-color;
+  }
+  .accordion__item + .accordion__item {
+    border-top: 0.1vw solid $question-accordion-border;
   }
   .accordion__panel {
     background-color: $question-accordion-panel-bg;

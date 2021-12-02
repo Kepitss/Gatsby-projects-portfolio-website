@@ -14,30 +14,31 @@ const About = ({ data }) => {
     office_outdoor_image.localFile.childImageSharp.gatsbyImageData
   )
   return (
-    <div className="about-us-container">
-      <div className="row-1">
-        <div className="text-side">
-          <h1>{`#${title}`}</h1>
+    <>
+      <div className="about-us-container">
+        <div className="row-1">
+          <div className="text-side">
+            <h1>{`#${title}`}</h1>
+          </div>
+          <GatsbyImage
+            className="image-side"
+            image={readyOfficeOutdoorImage}
+            alt="Office outdoor image"
+          />
         </div>
-        <GatsbyImage
-          className="image-side"
-          image={readyOfficeOutdoorImage}
-          alt="Office outdoor image"
-        />
-      </div>
-      <div className="row-2">
-        <GatsbyImage
-          className="image-side"
-          image={readyOfficeIndoorImage}
-          alt="Office indoor image"
-        />
-        <div className="text-side">
-          <p>{about_us_info}</p>
+        <div className="row-2">
+          <GatsbyImage
+            className="image-side"
+            image={readyOfficeIndoorImage}
+            alt="Office indoor image"
+          />
+          <div className="text-side">
+            <p>{about_us_info}</p>
+          </div>
         </div>
+        <QuestionAccordion />
       </div>
-
-      <QuestionAccordion />
-    </div>
+    </>
   )
 }
 
