@@ -1,7 +1,13 @@
 import React from "react"
 
+import AllProjects from "../components/AllProjects"
+
 const Projects = () => {
-  return <div>Projects page</div>
+  return (
+    <>
+      <AllProjects />
+    </>
+  )
 }
 
 export default Projects
