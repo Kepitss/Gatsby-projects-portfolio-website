@@ -15,10 +15,10 @@ const AllProjectResults = ({ selectCategory, searchTerm, projectsData }) => {
       return (
         <Link className="list-item" to={`/projects/${slug}`} key={index}>
           <div className="item-hover">
-            <h1>Open project</h1>
+            <h3>Open project</h3>
           </div>
           <GatsbyImage className="img" image={readyImage} alt={item.title} />
-          <h3>{item.title}</h3>
+          <h1>{item.title}</h1>
         </Link>
       )
     })

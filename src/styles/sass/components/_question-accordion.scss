@@ -11,7 +11,7 @@
   text-align: left;
   border: none;
   font-family: "Raleway", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.3vw;
 }
 
 .accordion__button:before {
@@ -38,7 +38,7 @@
   padding: 1vw;
   animation: fadein 0.35s ease-in;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2vw;
 }
 
 /* -------------------------------------------------- */
@@ -52,15 +52,6 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@media (max-width: 1024px) {
-  .accordion__button {
-    padding: 1.2vw;
-  }
-  .accordion__panel {
-    padding: 1.5vw;
   }
 }
 
