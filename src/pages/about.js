@@ -13,6 +13,9 @@ const About = ({ data }) => {
   const readyOfficeOutdoorImage = getImage(
     office_outdoor_image.localFile.childImageSharp.gatsbyImageData
   )
+
+  const { AboutUsQuestions } = data.strapiAboutUs
+
   return (
     <>
       <div className="about-us-container">
@@ -36,7 +39,10 @@ const About = ({ data }) => {
             <p>{about_us_info}</p>
           </div>
         </div>
-        <QuestionAccordion />
+        <QuestionAccordion
+          title="frequently asked questions"
+          AboutUsQuestions={AboutUsQuestions}
+        />
       </div>
     </>
   )
@@ -64,6 +70,7 @@ export const query = graphql`
       AboutUsQuestions {
         question
         question_answer
+        id
       }
     }
   }

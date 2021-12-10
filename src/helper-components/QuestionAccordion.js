@@ -10,23 +10,10 @@ import {
 
 import Title from "./Title"
 
-const QuestionAccordion = () => {
-  const data = useStaticQuery(graphql`
-    {
-      strapiAboutUs {
-        AboutUsQuestions {
-          question
-          question_answer
-          id
-        }
-      }
-    }
-  `)
-  const { AboutUsQuestions } = data.strapiAboutUs
-  console.log(AboutUsQuestions)
+const QuestionAccordion = ({ title, AboutUsQuestions }) => {
   return (
     <>
-      <Title title="frequently asked questions" />
+      <Title title={title} />
       <Accordion allowZeroExpanded>
         {AboutUsQuestions.map(item => (
           <AccordionItem key={item.id}>
