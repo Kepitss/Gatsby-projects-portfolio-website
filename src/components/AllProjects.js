@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import slugify from "slugify"
+import { useStaticQuery, graphql } from "gatsby"
 
 import SearchBarInput from "./SearchBarInput"
 import AllProjectResults from "./AllProjectResults"

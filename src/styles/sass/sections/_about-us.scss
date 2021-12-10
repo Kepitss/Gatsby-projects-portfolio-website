@@ -3,10 +3,11 @@
 .about-us-container {
   width: 60vw;
   margin: 0 auto;
-  padding: 10vh 0;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5vh;
 
   // Row one
   .row-1,
@@ -22,7 +23,7 @@
       h1 {
         width: 90%;
         font-family: "Nova Flat", sans-serif;
-        font-size: 2.5vw;
+        font-size: 3rem;
       }
       p {
         width: 90%;
@@ -37,12 +38,21 @@
 
   .row-2 {
     margin-top: 5vw;
+    margin-bottom: 5vh;
   }
 }
 
 @media (max-width: 1024px) {
   .about-us-container {
     width: 80vw;
+    .row-1,
+    .row-2 {
+      .text-side {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -58,7 +68,7 @@
         width: 100%;
 
         h1 {
-          font-size: 7.5vw;
+          font-size: 2rem;
           width: 95%;
         }
         p {
@@ -68,6 +78,19 @@
       }
       .image-side {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-us-container {
+    .row-1,
+    .row-2 {
+      .text-side {
+        h1 {
+          font-size: 1.7rem;
+        }
       }
     }
   }

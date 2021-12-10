@@ -57,6 +57,10 @@
       text-decoration: none;
       text-align: center;
       transition: 0.3s ease-in-out;
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
+      }
     }
 
     .validator {

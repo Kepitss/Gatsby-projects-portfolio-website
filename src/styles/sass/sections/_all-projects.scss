@@ -2,7 +2,8 @@
 
 .all-projects-container {
   width: 60vw;
-  margin: 2vw auto;
+  margin: 0 auto;
+  margin-top: 2vw;
   padding-top: 10vh;
   min-height: 100vh;
 
@@ -12,6 +13,7 @@
     margin: 0 auto;
     text-align: center;
 
+    // color is set in base/theme.scss
     h1 {
       width: 100%;
       font-family: "Nova Flat", sans-serif;
@@ -22,7 +24,7 @@
       width: 60%;
       margin: 0 auto;
       font-family: "Raleway", sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3vw;
     }
   }
 
@@ -34,12 +36,12 @@
     display: flex;
     justify-content: space-between;
 
+    // backgound-color is set in base/theme.scss
     input,
     select {
       font-family: "Poppins", sans-serif;
       border-radius: 0.2vw;
       border: none;
-      background-color: $bg-light;
 
       &:focus {
         outline: none;
@@ -90,11 +92,12 @@
         transition: 0.3s ease-in-out;
         opacity: 0;
 
-        h1 {
+        // color is set in base/theme.scss
+        h3 {
           font-family: "Nova Flat", sans-serif;
           color: $black-text-color;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -104,11 +107,10 @@
         }
       }
 
-      h3 {
-        color: $white-text-color;
+      h1 {
         margin: 0;
         font-family: "Nova Flat", sans-serif;
-        font-size: 1.3vw;
+        font-size: 1.5vw;
         padding: 0.1vw 0.5vw 0 0.5vw;
       }
     }
@@ -125,6 +127,13 @@
 @media (max-width: 1024px) {
   .all-projects-container {
     width: 80vw;
+
+    .all-projects-info {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
     .all-projects-search {
       input {
         font-size: 1.95vw;
@@ -149,8 +158,8 @@
         .item-hover {
           height: 21vw;
         }
-        h3 {
-          font-size: 2.5vw;
+        h1 {
+          font-size: 1.5rem;
         }
       }
       .no-projects-found-text {
@@ -181,20 +190,15 @@
     .all-projects-info {
       width: 100%;
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       p {
-        font-size: 0.7rem;
+        font-size: 3.9vw;
       }
     }
 
     // All projects list
     .all-projects-list {
-      .list-item {
-        h3 {
-          font-size: 3vw;
-        }
-      }
       .no-projects-found-text {
         font-size: 3vw;
       }
@@ -204,6 +208,12 @@
 
 @media (max-width: 500px) {
   .all-projects-container {
+    .all-projects-info {
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+
     .all-projects-search {
       width: 95%;
       input {
@@ -220,15 +230,18 @@
     // All projects list
     .all-projects-list {
       .list-item {
-        h3 {
-          font-size: 4vw;
-        }
-
         .img {
           height: 25vw;
         }
         .item-hover {
           height: 25vw;
+          h3 {
+            font-size: 0.8rem;
+          }
+        }
+
+        h1 {
+          font-size: 1rem;
         }
       }
       .no-projects-found-text {
@@ -240,13 +253,6 @@
 
 @media (max-width: 400px) {
   .all-projects-container {
-    // Text info
-    .all-projects-info {
-      width: 100%;
-      h1 {
-        font-size: 1.8rem;
-      }
-    }
     .all-projects-search {
       input {
         font-size: 4.4vw;

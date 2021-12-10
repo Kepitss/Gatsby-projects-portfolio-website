@@ -30,8 +30,8 @@ const SomeProjects = () => {
 
   return (
     <>
-      <Title title="some projects" />
       <div className="some-projects-container">
+        <Title title="some projects" />
         <div className="some-projects">
           {someProjects.map((project, index) => {
             const { title, image1, projectPosition } = project

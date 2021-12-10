@@ -18,7 +18,7 @@ const About = ({ data }) => {
       <div className="about-us-container">
         <div className="row-1">
           <div className="text-side">
-            <h1>{`#${title}`}</h1>
+            <h1>{title}</h1>
           </div>
           <GatsbyImage
             className="image-side"
