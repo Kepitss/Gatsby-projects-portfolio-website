@@ -3,10 +3,11 @@
 .about-us-container {
   width: 60vw;
   margin: 0 auto;
-  padding: 10vh 0;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5vh;
 
   // Row one
   .row-1,
@@ -37,6 +38,7 @@
 
   .row-2 {
     margin-top: 5vw;
+    margin-bottom: 5vh;
   }
 }
 
