@@ -92,6 +92,27 @@ body {
       }
     }
   }
+
+  // All Projects in projects page
+  .all-projects-container {
+    .all-projects-search {
+      input,
+      select {
+        // ----
+        background-color: none;
+        border: 0.15vw solid $black-button-border;
+        color: $black-text-color;
+      }
+    }
+
+    .all-projects-list {
+      .list-item {
+        h1 {
+          color: $black-text-color;
+        }
+      }
+    }
+  }
 }
 
 body.dark {
@@ -184,6 +205,26 @@ body.dark {
       button {
         color: $contact-form-submit-button-color;
         border: 0.15vw solid $contact-form-submit-button-border;
+      }
+    }
+  }
+
+  // All Projects in projects page
+  .all-projects-container {
+    .all-projects-search {
+      input,
+      select {
+        // ----
+        background-color: $bg-light;
+        color: $black-text-color;
+      }
+    }
+
+    .all-projects-list {
+      .list-item {
+        h1 {
+          color: $white-text-color;
+        }
       }
     }
   }

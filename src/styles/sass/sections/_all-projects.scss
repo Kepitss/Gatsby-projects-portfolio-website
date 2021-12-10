@@ -13,6 +13,7 @@
     margin: 0 auto;
     text-align: center;
 
+    // color is set in base/theme.scss
     h1 {
       width: 100%;
       font-family: "Nova Flat", sans-serif;
@@ -35,12 +36,12 @@
     display: flex;
     justify-content: space-between;
 
+    // backgound-color is set in base/theme.scss
     input,
     select {
       font-family: "Poppins", sans-serif;
       border-radius: 0.2vw;
       border: none;
-      background-color: $bg-light;
 
       &:focus {
         outline: none;
@@ -91,6 +92,7 @@
         transition: 0.3s ease-in-out;
         opacity: 0;
 
+        // color is set in base/theme.scss
         h3 {
           font-family: "Nova Flat", sans-serif;
           color: $black-text-color;
@@ -106,7 +108,6 @@
       }
 
       h1 {
-        color: $white-text-color;
         margin: 0;
         font-family: "Nova Flat", sans-serif;
         font-size: 1.5vw;
