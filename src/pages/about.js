@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import QuestionAccordion from "../components/QuestionAccordion"
+import QuestionAccordion from "../helper-components/QuestionAccordion"
 
 const About = ({ data }) => {
   const { title, about_us_info, office_indoor_image, office_outdoor_image } =

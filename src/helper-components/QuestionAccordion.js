@@ -8,7 +8,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion"
 
-import Title from "../components/Title"
+import Title from "./Title"
 
 const QuestionAccordion = () => {
   const data = useStaticQuery(graphql`

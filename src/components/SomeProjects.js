@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import slugify from "slugify"
 
-import Title from "../components/Title"
+import Title from "../helper-components/Title"
 
 const SomeProjects = () => {
   const data = useStaticQuery(graphql`
