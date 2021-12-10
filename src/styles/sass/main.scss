@@ -1,39 +1,42 @@
-// base
+// BASE
+// Base
 @import "./base/base";
 
-// title component
-@import "./components/title";
+// THEMES
+// Themes
+@import "./themes/themes";
 
-// navbar
-@import "./sections/navbar";
-
-// sidebar
-@import "./sections/sidebar";
-
-// Footer
-@import "./sections/footer";
-
-// themes
-@import "./base/theme";
-
-// homepage slider
-@import "./sections/slider";
-
-// homepage some projects
-@import "./sections/some-projects";
-
-// project page
-@import "./sections/project";
-
-// about us page
-@import "./sections/about-us";
-
-// ----
-// question accordion component
-@import "./components/question-accordion";
+// HELPER COMPONENTS
+// Title component
+@import "./helper-components/title";
 
 // Contact form
-@import "./components/contact-form";
+@import "./helper-components/contact-form";
+
+// Question accordion component
+@import "./helper-components/question-accordion";
+
+// COMPONENTS
+// Navbar
+@import "./components/navbar";
+
+// Sidebar
+@import "./components/sidebar";
+
+// Footer
+@import "./components/footer";
+
+// Homepage slider
+@import "./components/slider";
+
+// Homepage some projects
+@import "./components/some-projects";
+
+// Project page
+@import "./components/project";
 
 // All projects in projects page
-@import "./sections/all-projects";
+@import "./components/all-projects";
+
+// About page info
+@import "./components/about-page-info";
