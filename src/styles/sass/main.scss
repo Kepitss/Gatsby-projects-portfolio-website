@@ -3,8 +3,11 @@
 @import "./base/base";
 
 // THEMES
-// Themes
-@import "./themes/themes";
+// Light theme
+@import "./themes/theme-light.scss";
+
+// Dark theme
+@import "./themes/theme-dark.scss";
 
 // HELPER COMPONENTS
 // Title component

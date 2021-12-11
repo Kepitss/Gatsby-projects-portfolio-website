@@ -1,0 +1,121 @@
+@use "../helpers" as *;
+
+body {
+  // Varibales for light theme
+  $bg: $bg-light; // background-color for base container
+  $textNormal: $black-text-color; // color for any text who dont have set color in bottom
+
+  $sidebar-bg: $bg-dark;
+  $sidebar-exit-btn: $white-text-color;
+  $sidebar-link-color: $white-text-color;
+
+  $slide-text-color: $white-text-color;
+  $slide-over-container-bg: $slide-over-container-dark;
+
+  $some-projects-button-color: $black-text-color;
+  $some-projects-button-border: $black-border;
+
+  $question-accordion-border: $black-border;
+  $question-accordion-button-color: $black-text-color;
+  $question-accordion-panel-bg: $bg-dark;
+  $question-accordion-panel-color: $white-text-color;
+
+  $contact-form-input-textarea-bg: $bg-light;
+  $contact-form-input-textarea-border: $black-border;
+  $contact-form-input-textarea-color: $white-text-color;
+  $contact-form-submit-button-color: $black-text-color;
+  $contact-form-submit-button-border: $black-border;
+
+  $all-projects-inputs-background-color: none;
+  $all-projects-inputs-border-color: $black-border;
+  $all-projects-inputs-text-color: $black-text-color;
+  $all-projects-item-title-color: $black-text-color;
+
+  background-color: $bg;
+  color: $textNormal;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease-out;
+
+  // Sidebar
+  .sidebar {
+    background-color: $sidebar-bg;
+    .close-btn {
+      color: $sidebar-exit-btn;
+    }
+    .sidebar-links {
+      .sidebar-link {
+        color: $sidebar-link-color;
+      }
+    }
+  }
+  // Slider
+  .slider {
+    .slide-over-container {
+      background-color: $slide-over-container-bg;
+      h1,
+      p {
+        color: $slide-text-color;
+      }
+    }
+  }
+
+  // Some Projects
+  .some-projects-container {
+    .projects-btn {
+      color: $some-projects-button-color;
+      border: 0.15vw solid $some-projects-button-border;
+    }
+  }
+
+  // About page Accordion
+  .accordion {
+    border: 0.1vw solid $question-accordion-border;
+  }
+  .accordion__button {
+    color: $question-accordion-button-color;
+  }
+  .accordion__item + .accordion__item {
+    border-top: 0.1vw solid $question-accordion-border;
+  }
+  .accordion__panel {
+    background-color: $question-accordion-panel-bg;
+    color: $question-accordion-panel-color;
+  }
+
+  // Contact form
+  .contact-form-container {
+    .contact-form {
+      input,
+      textarea {
+        background-color: $contact-form-input-textarea-bg;
+        border: 0.15vw solid $contact-form-input-textarea-border;
+        color: $contact-form-input-textarea-color;
+      }
+      button {
+        color: $contact-form-submit-button-color;
+        border: 0.15vw solid $contact-form-submit-button-border;
+      }
+    }
+  }
+
+  // All Projects in projects page
+  .all-projects-container {
+    .all-projects-search {
+      input,
+      select {
+        // ----
+        background-color: $all-projects-inputs-background-color;
+        border: 0.15vw solid $all-projects-inputs-border-color;
+        color: $all-projects-inputs-text-color;
+      }
+    }
+
+    .all-projects-list {
+      .list-item {
+        h1 {
+          color: $all-projects-item-title-color;
+        }
+      }
+    }
+  }
+}

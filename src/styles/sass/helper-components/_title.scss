@@ -8,16 +8,22 @@
   font-size: 3rem;
 }
 
+// Media Queries
+// max-width: 1024px
 @media (max-width: 1024px) {
   .main-title {
     font-size: 2.5rem;
   }
 }
+
+// max-width: 700px
 @media (max-width: 700px) {
   .main-title {
     font-size: 2rem;
   }
 }
+
+// max-width: 500px
 @media (max-width: 500px) {
   .main-title {
     font-size: 1.7rem;

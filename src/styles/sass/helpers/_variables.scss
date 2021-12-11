@@ -13,12 +13,13 @@ $navbar-background: rgba(14, 17, 17, 0.6);
 $slide-over-container-light: rgba(248, 249, 245, 0.4);
 $slide-over-container-dark: rgba(14, 17, 17, 0.4);
 
-// some projects hover background
-$some-project-hover-bg: rgba(248, 249, 245, 0.6);
+// project hover background
+$project-hover-bg: rgba(248, 249, 245, 0.6);
 
 // border color
-$white-button-border: #f8f9f5;
-$black-button-border: #0e1111;
+$white-border: #f8f9f5;
+$black-border: #0e1111;
 
-// Contact form success color
+// Contact form colors
 $form-success-color: #37c60f;
+$form-error-color: #f91202;

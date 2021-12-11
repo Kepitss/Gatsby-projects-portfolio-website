@@ -1,44 +1,45 @@
 @use "../helpers" as *;
+
 .accordion {
   width: 100%;
   border-radius: 2px;
-}
 
-.accordion__button {
-  cursor: pointer;
-  padding: 0.8vw;
-  width: 95%;
-  text-align: left;
-  border: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.3vw;
-}
+  .accordion__button {
+    cursor: pointer;
+    padding: 0.8vw;
+    width: 95%;
+    text-align: left;
+    border: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.3vw;
 
-.accordion__button:before {
-  display: inline-block;
-  content: "";
-  height: 0.6rem;
-  width: 0.6rem;
-  margin-right: 12px;
-  border-bottom: 0.2rem solid currentColor;
-  border-right: 0.2rem solid currentColor;
-  transform: rotate(-45deg);
-}
+    &::before {
+      display: inline-block;
+      content: "";
+      height: 0.6rem;
+      width: 0.6rem;
+      margin-right: 12px;
+      border-bottom: 0.2rem solid currentColor;
+      border-right: 0.2rem solid currentColor;
+      transform: rotate(-45deg);
+    }
+  }
 
-.accordion__button[aria-expanded="true"]::before,
-.accordion__button[aria-selected="true"]::before {
-  transform: rotate(45deg);
+  .accordion__button[aria-expanded="true"]::before,
+  .accordion__button[aria-selected="true"]::before {
+    transform: rotate(45deg);
+  }
+
+  .accordion__panel {
+    padding: 1vw;
+    animation: fadein 0.35s ease-in;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+  }
 }
 
 [hidden] {
   display: none;
-}
-
-.accordion__panel {
-  padding: 1vw;
-  animation: fadein 0.35s ease-in;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2vw;
 }
 
 /* -------------------------------------------------- */
@@ -55,20 +56,25 @@
   }
 }
 
+// Media Queries
+// max-width: 700px
 @media (max-width: 700px) {
   .accordion {
     width: 95%;
-  }
-  .accordion__button:before {
-    height: 0.4rem;
-    width: 0.4rem;
-  }
-  .accordion__button {
-    padding: 2.4vw;
-    font-size: 4vw;
-  }
-  .accordion__panel {
-    padding: 3vw;
-    font-size: 3.9vw;
+
+    .accordion__button {
+      padding: 2.4vw;
+      font-size: 4vw;
+
+      &::before {
+        height: 0.4rem;
+        width: 0.4rem;
+      }
+    }
+
+    .accordion__panel {
+      padding: 3vw;
+      font-size: 3.9vw;
+    }
   }
 }

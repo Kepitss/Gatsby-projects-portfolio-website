@@ -2,7 +2,7 @@
 
 .sidebar {
   // background-color is set in styles/sass/base/theme.scss
-  @extend %flex-center-center;
+  @include display-flex(row, center, center);
   position: fixed;
   top: 0;
   width: 100vw;
@@ -21,8 +21,7 @@
   }
 
   .sidebar-links {
-    display: flex;
-    flex-direction: column;
+    @include display-flex(column, unset, unset);
 
     .sidebar-link {
       // color is set in styles/sass/base/theme.scss
@@ -43,6 +42,8 @@
   right: 0;
 }
 
+// Media Queries
+// max-width: 700px
 @media (max-width: 700px) {
   .sidebar {
     .sidebar-links {
@@ -53,6 +54,7 @@
   }
 }
 
+// max-width: 500px
 @media (max-width: 500px) {
   .sidebar {
     .sidebar-links {

@@ -43,10 +43,9 @@
     }
     button {
       // button color and border is set on base/theme.scss
-      @extend %flex-center-center;
+      @include display-flex(row, center, center);
       width: 25%;
-      margin-left: 75%;
-      margin-top: 0.5rem;
+      margin: 0.5rem 0 0 75%;
       font-family: "Nova Flat", sans-serif;
       padding: 0.5rem;
       font-size: 1.3rem;
@@ -67,26 +66,27 @@
       font-family: "Raleway", sans-serif;
       font-size: 1.3vw;
       // validator color is the same on both website themes
-      color: red;
+      color: $form-error-color;
     }
   }
 }
 
 .success-msg {
+  @include display-flex(row, center, center);
+  width: 100%;
+  height: 100vh;
+
   h3 {
-    font-family: "Nova Flat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.5vw;
     // success messages color is the same on both website themes
     color: $form-success-color;
     text-align: center;
   }
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
+// Media Queries
+// max-width: 1024px
 @media (max-width: 1024px) {
   .contact-form-container {
     width: 80vw;
@@ -108,6 +108,8 @@
     }
   }
 }
+
+// max-width: 800px
 @media (max-width: 800px) {
   .contact-form-container {
     width: 95vw;
@@ -136,6 +138,8 @@
     }
   }
 }
+
+// max-width: 500px
 @media (max-width: 500px) {
   .contact-form-container {
     width: 95vw;
