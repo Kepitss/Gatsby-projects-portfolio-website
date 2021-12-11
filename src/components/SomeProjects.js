@@ -26,7 +26,6 @@ const SomeProjects = () => {
   `)
 
   const { nodes: someProjects } = data.allStrapiProjects
-  console.log(someProjects)
 
   return (
     <>

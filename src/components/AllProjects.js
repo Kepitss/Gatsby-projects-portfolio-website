@@ -33,11 +33,13 @@ const BothTogether = () => {
         <h1>Search for Project</h1>
         <p>Search for all projects or search with category</p>
       </div>
+      {/* Search bar */}
       <SearchBarInput
         projectsData={data.allStrapiProjects.nodes}
         setSelectCategory={setSelectCategory}
         setSearchTerm={setSearchTerm}
       />
+      {/* Search bar results */}
       <AllProjectResults
         selectCategory={selectCategory}
         searchTerm={searchTerm}
