@@ -31,6 +31,9 @@ body.dark {
   $all-projects-inputs-text-color: $black-text-color;
   $all-projects-item-title-color: $white-text-color;
 
+  $error-page-home-button-border: $white-border;
+  $error-page-home-button-text-color: $white-text-color;
+
   background-color: $bg;
   color: $textNormal;
   -webkit-font-smoothing: antialiased;
@@ -117,6 +120,14 @@ body.dark {
           color: $all-projects-item-title-color;
         }
       }
+    }
+  }
+
+  // Error page button
+  .error-page-container {
+    .home-btn {
+      border: 0.15vw solid $error-page-home-button-border;
+      color: $error-page-home-button-text-color;
     }
   }
 }
