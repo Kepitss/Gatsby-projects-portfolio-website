@@ -167,7 +167,10 @@
     .some-projects {
       .project {
         .project-hover {
+          padding: 0 0.5rem;
           opacity: 1;
+          width: auto;
+          height: auto;
         }
       }
     }
