@@ -26,7 +26,6 @@ body.dark {
   $contact-form-submit-button-color: $white-text-color;
   $contact-form-submit-button-border: $white-border;
 
-  $all-projects-inputs-background-color: $bg-light;
   $all-projects-inputs-border-color: none;
   $all-projects-inputs-text-color: $black-text-color;
   $all-projects-item-title-color: $white-text-color;
@@ -107,9 +106,7 @@ body.dark {
     .all-projects-search {
       input,
       select {
-        // ----
         border: $all-projects-inputs-border-color;
-        background-color: $all-projects-inputs-background-color;
         color: $all-projects-inputs-text-color;
       }
     }
