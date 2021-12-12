@@ -83,11 +83,6 @@
     text-decoration: none;
     text-align: center;
     transition: 0.3s ease-in-out;
-
-    &:hover {
-      background-color: $bg-dark;
-      color: $white-text-color;
-    }
   }
 }
 
@@ -156,6 +151,18 @@
             font-size: 0.8rem;
           }
         }
+      }
+    }
+  }
+}
+
+// hover: hover and pointer: fine
+@media (hover: hover) and (pointer: fine) {
+  .some-projects-container {
+    .projects-btn {
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
       }
     }
   }
