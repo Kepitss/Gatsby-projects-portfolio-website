@@ -66,19 +66,19 @@ body.dark {
   .some-projects-container {
     .projects-btn {
       color: $some-projects-button-color;
-      border: 0.15vw solid $some-projects-button-border;
+      border: 2px solid $some-projects-button-border;
     }
   }
 
   // About page Accordion
   .accordion {
-    border: 0.1vw solid $question-accordion-border;
+    border: 2px solid $question-accordion-border;
   }
   .accordion__button {
     color: $question-accordion-button-color;
   }
   .accordion__item + .accordion__item {
-    border-top: 0.1vw solid $question-accordion-border;
+    border-top: 2px solid $question-accordion-border;
   }
   .accordion__panel {
     background-color: $question-accordion-panel-bg;
@@ -91,12 +91,12 @@ body.dark {
       input,
       textarea {
         background-color: $contact-form-input-textarea-bg;
-        border: 0.15vw solid $contact-form-input-textarea-border;
+        border: 2px solid $contact-form-input-textarea-border;
         color: $contact-form-input-textarea-color;
       }
       button {
         color: $contact-form-submit-button-color;
-        border: 0.15vw solid $contact-form-submit-button-border;
+        border: 2px solid $contact-form-submit-button-border;
       }
     }
   }
@@ -123,7 +123,7 @@ body.dark {
   // Error page button
   .error-page-container {
     .home-btn {
-      border: 0.15vw solid $error-page-home-button-border;
+      border: 2px solid $error-page-home-button-border;
       color: $error-page-home-button-text-color;
     }
   }
