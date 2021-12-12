@@ -16,8 +16,8 @@
     &::before {
       display: inline-block;
       content: "";
-      height: 0.6rem;
-      width: 0.6rem;
+      height: 0.6vw;
+      width: 0.6vw;
       margin-right: 12px;
       border-bottom: 0.2rem solid currentColor;
       border-right: 0.2rem solid currentColor;
@@ -67,8 +67,8 @@
       font-size: 4vw;
 
       &::before {
-        height: 0.4rem;
-        width: 0.4rem;
+        height: 1.6vw;
+        width: 1.6vw;
       }
     }
 

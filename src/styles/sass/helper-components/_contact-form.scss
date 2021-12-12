@@ -1,28 +1,24 @@
 @use "../helpers/" as *;
 
 .contact-form-container {
-  width: 40vw;
-  height: 100vh;
+  @include display-flex(column, center, center);
+  width: 100%;
+  height: 85vh;
   margin: 0 auto;
-  padding-top: 15vh;
 
   .contact-form {
+    width: 60%;
     position: relative;
     display: flex;
     flex-direction: column;
-
-    label,
-    button {
-      font-family: "Raleway", sans-serif;
-      margin-top: 0.5vw;
-    }
 
     input,
     textarea {
       // background color and color is set on base/theme.scss
       font-family: "Poppins", sans-serif;
       font-size: 1.1vw;
-      padding: 0.4vw 1vw;
+      padding: 0 0.5rem;
+      height: 2.5rem;
       border-radius: 0.2vw;
       border: none;
 
@@ -30,25 +26,27 @@
         outline: none;
       }
     }
+
     textarea {
       min-height: 15vw;
       max-height: 50vw;
+      padding-top: 0.3rem;
       resize: vertical;
     }
-
     label {
       // color is set at base/theme.scss
-      font-size: 1.3vw;
-      padding-left: 0.5vw;
+      font-family: "Raleway", sans-serif;
+      font-size: 1.1vw;
+      padding-left: 0.3rem;
+      margin: 0.5rem 0 0.1rem 0;
     }
     button {
       // button color and border is set on base/theme.scss
       @include display-flex(row, center, center);
-      width: 25%;
       margin: 0.5rem 0 0 75%;
       font-family: "Nova Flat", sans-serif;
-      padding: 0.5rem;
-      font-size: 1.3rem;
+      padding: 0.5rem 0;
+      font-size: 1.3vw;
       text-transform: capitalize;
       background-color: transparent;
       border-radius: 0.5vw;
@@ -56,15 +54,11 @@
       text-decoration: none;
       text-align: center;
       transition: 0.3s ease-in-out;
-      &:hover {
-        background-color: $bg-dark;
-        color: $white-text-color;
-      }
     }
 
     .validator {
       font-family: "Raleway", sans-serif;
-      font-size: 1.3vw;
+      font-size: 1.1vw;
       // validator color is the same on both website themes
       color: $form-error-color;
     }
@@ -78,7 +72,7 @@
 
   h3 {
     font-family: "Raleway", sans-serif;
-    font-size: 1.5vw;
+    font-size: 2.1vw;
     // success messages color is the same on both website themes
     color: $form-success-color;
     text-align: center;
@@ -86,55 +80,91 @@
 }
 
 // Media Queries
-// max-width: 1024px
-@media (max-width: 1024px) {
+// max-width: 1200px
+@media (max-width: 1200px) {
   .contact-form-container {
-    width: 80vw;
     .contact-form {
+      width: 60%;
+
       input,
       textarea,
       label,
       .validator {
-        font-size: 1.95vw;
+        font-size: 1.6vw;
       }
-      textarea {
-        min-height: 20vw;
+
+      button {
+        font-size: 1.8vw;
       }
     }
   }
   .success-msg {
     h3 {
-      font-size: 3vw;
+      font-size: 2.6vw;
     }
   }
 }
 
-// max-width: 800px
-@media (max-width: 800px) {
+// max-width: 900px
+@media (max-width: 900px) {
   .contact-form-container {
-    width: 95vw;
     .contact-form {
+      width: 90%;
+
       input,
       textarea,
       label,
       .validator {
-        font-size: 2.6vw;
+        font-size: 2.1vw;
       }
+
+      textarea {
+        min-height: 30vw;
+      }
+
       button {
-        padding: 1vw;
-      }
-      textarea {
-        min-height: 25vw;
-      }
-      input,
-      textarea {
-        padding: 0.8vw 2vw;
+        font-size: 2.3vw;
       }
     }
   }
   .success-msg {
     h3 {
-      font-size: 4.5vw;
+      font-size: 3.1vw;
+    }
+  }
+}
+
+// max-width: 600px
+@media (max-width: 600px) {
+  .contact-form-container {
+    .contact-form {
+      width: 95%;
+
+      input,
+      textarea,
+      label,
+      .validator {
+        font-size: 4vw;
+      }
+
+      input,
+      textarea {
+        padding: 0 0.3rem;
+      }
+
+      textarea {
+        padding-top: 0.3rem;
+        min-height: 50vw;
+      }
+
+      button {
+        font-size: 4.2vw;
+      }
+    }
+  }
+  .success-msg {
+    h3 {
+      font-size: 5vw;
     }
   }
 }
@@ -142,31 +172,49 @@
 // max-width: 500px
 @media (max-width: 500px) {
   .contact-form-container {
-    width: 95vw;
     .contact-form {
+      button {
+        margin: 0.5rem 0 0 50%;
+      }
+    }
+  }
+}
+
+// max-width: 400px
+@media (max-width: 400px) {
+  .contact-form-container {
+    .contact-form {
+      width: 90%;
+
       input,
       textarea,
       label,
       .validator {
-        font-size: 3.9vw;
+        font-size: 5vw;
       }
-      textarea {
-        min-height: 40vw;
-      }
-      input,
-      textarea {
-        padding: 1.2vw 3vw;
-      }
+
       button {
-        width: 40%;
-        margin-left: 60%;
-        padding: 1vw;
+        font-size: 5.2vw;
       }
     }
   }
   .success-msg {
     h3 {
       font-size: 6vw;
+    }
+  }
+}
+
+// hover: hover and pointer: fine
+@media (hover: hover) and (pointer: fine) {
+  .contact-form-container {
+    .contact-form {
+      button {
+        &:hover {
+          background-color: $bg-dark;
+          color: $white-text-color;
+        }
+      }
     }
   }
 }

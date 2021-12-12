@@ -23,11 +23,6 @@
     text-decoration: none;
     text-align: center;
     transition: 0.3s ease-in-out;
-
-    &:hover {
-      background-color: $bg-dark;
-      color: $white-text-color;
-    }
   }
 }
 
@@ -41,6 +36,19 @@
 
     .home-btn {
       font-size: 1rem;
+      margin-top: 4vw;
+    }
+  }
+}
+
+// hover: hover and pointer: fine
+@media (hover: hover) and (pointer: fine) {
+  .error-page-container {
+    .home-btn {
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
+      }
     }
   }
 }

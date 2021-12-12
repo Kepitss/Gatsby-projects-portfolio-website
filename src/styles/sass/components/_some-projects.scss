@@ -46,7 +46,7 @@
         z-index: 2;
         background-color: $project-hover-bg;
         transition: 0.3s ease-in-out;
-        opacity: 0;
+        opacity: 1;
 
         h1 {
           font-family: "Nova Flat", sans-serif;
@@ -61,11 +61,6 @@
         height: 100%;
         z-index: 1;
         border-color: green;
-      }
-      &:hover {
-        .project-hover {
-          opacity: 1;
-        }
       }
     }
   }
@@ -83,11 +78,6 @@
     text-decoration: none;
     text-align: center;
     transition: 0.3s ease-in-out;
-
-    &:hover {
-      background-color: $bg-dark;
-      color: $white-text-color;
-    }
   }
 }
 
@@ -161,13 +151,40 @@
   }
 }
 
-// hover: none
-@media (hover: none) {
+// hover: hover and pointer: fine
+@media (hover: hover) and (pointer: fine) {
   .some-projects-container {
     .some-projects {
       .project {
         .project-hover {
-          opacity: 1;
+          opacity: 0;
+        }
+        &:hover {
+          .project-hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .projects-btn {
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
+      }
+    }
+  }
+}
+
+// hover: none
+@media screen and (hover: none) {
+  .some-projects-container {
+    .some-projects {
+      .project {
+        .project-hover {
+          padding: 0 0.5rem;
+          width: auto;
+          height: auto;
         }
       }
     }
