@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import QuestionAccordion from "../helper-components/QuestionAccordion"
+import Seo from "../helper-components/Seo"
 
 const About = ({ data }) => {
   const { title, about_us_info, office_indoor_image, office_outdoor_image } =
@@ -18,6 +19,7 @@ const About = ({ data }) => {
 
   return (
     <>
+      <Seo title="About" />
       <div className="about-us-container">
         <div className="row-1">
           <div className="text-side">
