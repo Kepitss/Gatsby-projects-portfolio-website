@@ -3,6 +3,8 @@
 Šis projekts ir veidots ar Gatsby ,kas papildus lieto Git(gitflow) ,lai izsekotu projekta izmaiņas un darba plūsmu.
 <br></br>
 
+https://gatsby-projects-portfolio.netlify.app/
+
 ## "Branch" vārda raksīšanas noteikumi.
 
 - **Sāc "branch" vārdu ar vienu no grupas vārdiem:**
