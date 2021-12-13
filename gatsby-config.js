@@ -7,8 +7,13 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    title: "Mārtiņš Ķepīts",
     motto: `We think context matters`,
     description: `Our work appears regularly in both mainstream and industry specific publications.`,
+    titleTemplate: "%s | Gatsby Project",
+    url: "https://martinskepits.lv/", // No trailing slash allowed!
+    image: "/main-img.png", // Path to the image placed in the 'static' folder, in the project's root directory.
+    twitterUsername: "@kepits_martins",
   },
   plugins: [
     `gatsby-plugin-image`,
