@@ -1,0 +1,54 @@
+@use "../helpers/" as *;
+
+.error-page-container {
+  @include display-flex(column, center, center);
+  height: 100vh;
+
+  h1 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .home-btn {
+    // color and border is set in themes.scss
+    font-family: "Nova Flat", sans-serif;
+    margin-top: 2vw;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+// Media Queries
+// max-width 500px
+@media (max-width: 500px) {
+  .error-page-container {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .home-btn {
+      font-size: 1rem;
+      margin-top: 4vw;
+    }
+  }
+}
+
+// hover: hover and pointer: fine
+@media (hover: hover) and (pointer: fine) {
+  .error-page-container {
+    .home-btn {
+      &:hover {
+        background-color: $bg-dark;
+        color: $white-text-color;
+      }
+    }
+  }
+}

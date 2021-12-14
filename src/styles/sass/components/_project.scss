@@ -1,0 +1,99 @@
+@use "../helpers" as *;
+
+.project-container {
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 10vh;
+
+  // Row one
+  .row-1,
+  .row-2,
+  .row-3 {
+    @include display-flex(row, unset, unset);
+
+    .text-side {
+      @include display-flex(column, center, unset);
+      width: 40%;
+
+      h1 {
+        width: 90%;
+        font-family: "Nova Flat", sans-serif;
+        font-size: 3rem;
+      }
+      p {
+        width: 90%;
+        font-family: "Raleway", sans-serif;
+        font-size: 1.3vw;
+      }
+    }
+    .image-side {
+      width: 90%;
+    }
+  }
+
+  .row-2,
+  .row-3 {
+    margin-top: 5vw;
+  }
+}
+
+// Media Queries
+// max-width: 1024px
+@media (max-width: 1024px) {
+  .project-container {
+    width: 80vw;
+    .row-1,
+    .row-2,
+    .row-3 {
+      .text-side {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+// max-width: 700px
+@media (max-width: 700px) {
+  .project-container {
+    width: 95vw;
+
+    .row-1,
+    .row-2,
+    .row-3 {
+      flex-direction: column;
+
+      .text-side {
+        width: 100%;
+
+        h1 {
+          font-size: 2rem;
+          width: 95%;
+        }
+        p {
+          font-size: 3.9vw;
+          width: 95%;
+        }
+      }
+      .image-side {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// max-width: 500px
+@media (max-width: 500px) {
+  .project-container {
+    .row-1,
+    .row-2,
+    .row-3 {
+      .text-side {
+        h1 {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}

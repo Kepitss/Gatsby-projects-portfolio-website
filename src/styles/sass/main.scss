@@ -1,0 +1,48 @@
+// BASE
+// Base
+@import "./base/base";
+
+// THEMES
+// Light theme
+@import "./themes/theme-light.scss";
+
+// Dark theme
+@import "./themes/theme-dark.scss";
+
+// HELPER COMPONENTS
+// Title component
+@import "./helper-components/title";
+
+// Contact form
+@import "./helper-components/contact-form";
+
+// Question accordion component
+@import "./helper-components/question-accordion";
+
+// COMPONENTS
+// Navbar
+@import "./components/navbar";
+
+// Sidebar
+@import "./components/sidebar";
+
+// Footer
+@import "./components/footer";
+
+// Homepage slider
+@import "./components/slider";
+
+// Homepage some projects
+@import "./components/some-projects";
+
+// Project page
+@import "./components/project";
+
+// All projects in projects page
+@import "./components/all-projects";
+
+// About page info
+@import "./components/about-page-info";
+
+// Error (404) page
+@import "./components/404";
